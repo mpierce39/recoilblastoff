@@ -78,20 +78,6 @@ public class GameManagment : MonoBehaviour {
             currentGameData.firstTimePlaying = data.firstTimePlaying;
         }
     }
-    void LoadMenu()
-    {
-        //resetting things and moving to the main menu Scene
-    }
-
-    void LoadGame()
-    {
-        //setting things up and moving to the Gameplay Scene
-    }
-
-    public void IncreaseDifficulty(int score)
-    {
-        //Setting things up to make it harder
-    }
 
     public void IncreaseScore(int score)
     {
