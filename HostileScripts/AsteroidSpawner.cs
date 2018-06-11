@@ -5,9 +5,11 @@ using UnityEngine;
 public class AsteroidSpawner : MonoBehaviour
 {
     [SerializeField]
+    //Scriptable Game Object in asset Folders
     public Enemy asteroidSpawner;
     public GameObject asteroidPrefab;
     public GameObject asteroidParent;
+    //Waypoints The Ship can go to!
     List<GameObject> waypoints = new List<GameObject>();
     public Transform placeToSpawnAsteroid;
     Animation asteroidSpawnAnim;
