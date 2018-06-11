@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
+    //Prefab Scriptable Objects
     public Enemy asteroid;
+    //Location The Asteroid Spawns
     public Transform spawnPoint;
     [HideInInspector]
     public Sprite spriteToUse;
     [HideInInspector]
     public SpriteRenderer spriteGettingUpdated;
     public Sprite[] healthValues;
+    
     public  void Start()
     {
         spawnPoint = gameObject.transform;
@@ -54,6 +57,7 @@ public class Asteroid : MonoBehaviour
             asteroid.IncreaseScore();
         }
     }
+    //Changes the asteroids sprite when it is damaged
     void ChangeSprites(int health)
     {
         switch (health)
@@ -62,6 +66,7 @@ public class Asteroid : MonoBehaviour
                 {
                     spriteGettingUpdated = gameObject.GetComponent<SpriteRenderer>();
                     spriteGettingUpdated.sprite = spriteToUse = healthValues[0];
+                    //Gets the asteroid sprite GameObjects
                     for (int i = 0; i < gameObject.transform.childCount; i++)
                     {
                         spriteGettingUpdated = gameObject.transform.GetChild(i).GetComponent<SpriteRenderer>();
